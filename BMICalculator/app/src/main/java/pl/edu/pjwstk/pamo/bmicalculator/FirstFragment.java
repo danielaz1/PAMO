@@ -28,16 +28,13 @@ public class FirstFragment extends Fragment {
         final EditText massInput = view.findViewById(R.id.mass_input);
         final TextView res = view.findViewById(R.id.textviev_result);
 
-
         view.findViewById(R.id.button_calculate).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                double calculatedResult = calculate(Double.valueOf(massInput.getText().toString()),
+                        Double.valueOf(heightInput.getText().toString()));
 
-                double calculatedResult = calculate(Double.valueOf(massInput.getText().toString()), Double.valueOf(heightInput.getText().toString()));
-
-
-                System.out.println(heightInput.getText().toString());
                 res.setText(String.valueOf(calculatedResult));
             }
         });
@@ -45,6 +42,6 @@ public class FirstFragment extends Fragment {
 
     private double calculate(Double mass, Double height) {
         double heightM = height / 100;
-        return mass/(heightM*heightM);
+        return mass / (heightM * heightM);
     }
 }
