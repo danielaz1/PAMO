@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BMICalculator</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_calculate">OBLICZ</string>
+    <string name="text_mass">Masa</string>
+    <string name="text_weight">Wzrost</string>
+</resources>
