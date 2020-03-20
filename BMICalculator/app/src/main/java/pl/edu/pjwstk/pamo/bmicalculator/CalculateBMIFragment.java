@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-public class FirstFragment extends Fragment {
+public class CalculateBMIFragment extends Fragment {
 
     @Override
     public View onCreateView(
@@ -23,19 +23,19 @@ public class FirstFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        setCalculateButton(view);
+    }
 
-        final EditText heightInput = view.findViewById(R.id.weight_input);
+    private void setCalculateButton(@NonNull View view) {
+        final EditText heightInput = view.findViewById(R.id.height_input);
         final EditText massInput = view.findViewById(R.id.mass_input);
         final TextView res = view.findViewById(R.id.textviev_result);
 
         view.findViewById(R.id.button_calculate).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                double calculatedResult = calculate(Double.valueOf(massInput.getText().toString()),
-                        Double.valueOf(heightInput.getText().toString()));
-
-                res.setText(String.valueOf(calculatedResult));
+                String calculated = BMIToString(massInput.getText().toString(), heightInput.getText().toString());
+                res.setText(calculated);
             }
         });
     }
@@ -43,5 +43,10 @@ public class FirstFragment extends Fragment {
     private double calculate(Double mass, Double height) {
         double heightM = height / 100;
         return mass / (heightM * heightM);
+    }
+
+    private String BMIToString(String mass, String height) {
+        double calculated = calculate(Double.valueOf(mass), Double.valueOf(height));
+        return String.valueOf(calculated);
     }
 }

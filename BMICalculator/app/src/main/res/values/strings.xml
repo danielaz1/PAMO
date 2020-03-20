@@ -2,6 +2,30 @@
     <string name="app_name">BMICalculator</string>
     <string name="action_settings">Settings</string>
     <string name="button_calculate">OBLICZ</string>
+    <string name="button_calculate_bmi">OBLICZ BMI</string>
+    <string name="button_calculate_cal">ILE MOGĘ ZJEŚĆ KALORII</string>
+    <string name="button_what_to_eat">Co jeść w czasach CorivaVirusa</string>
     <string name="text_mass">Masa</string>
-    <string name="text_weight">Wzrost</string>
+    <string name="text_height">Wzrost</string>
+    <string name="text_age">Wiek</string>
+    <string name="text_gender">Płeć</string>
+    <string name="radio_man">Mężczyzna</string>
+    <string name="radio_woman">Kobieta</string>
+    <string name="text_corona_pizza">Pizza Korona</string>
+    <string name="text_kcal_result">Zalecane spożycie kcal/dzień</string>
+    <string name="first_fragment_label">Calculate BMI</string>
+    <string name="logo_description">Logo</string>
+
+    <string name="pizza_recipe">Składniki:\n
+ciasto na pizzę\n
+sos pomidorowy (użyłam przecieru pomidorowego z czosnkiem, oregano i bazylią)\n
+15 dkg startego żółtego sera\n
+10 dkg szynki\n
+po kawałku papryki: czerwonej, żółtej i zielonej\n
+kilka pieczarek, ok 5-6 sztuk\n
+1/2 cebuli\n
+2 łyżki kukurydzy z puszki\n
+Opcjonalnie: dwie łyżki masła czosnkowo-ziołowego\n
+</string>
+
 </resources>

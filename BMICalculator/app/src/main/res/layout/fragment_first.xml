@@ -2,9 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/FirstFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".CalculateBMIFragment">
 
     <Button
         android:id="@+id/button_calculate"
@@ -15,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weight_input"
+        app:layout_constraintTop_toBottomOf="@+id/height_input"
         app:layout_constraintVertical_bias="0.286" />
 
     <TextView
@@ -23,8 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:text="@string/text_weight"
-        app:layout_constraintBottom_toTopOf="@+id/weight_input"
+        android:text="@string/text_height"
+        app:layout_constraintBottom_toTopOf="@+id/height_input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -45,17 +46,17 @@
         android:ems="10"
         android:hint="@string/text_mass"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/weight_input"
+        app:layout_constraintBottom_toTopOf="@+id/height_input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/weight_input"
+        android:id="@+id/height_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/text_weight"
+        android:hint="@string/text_height"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
