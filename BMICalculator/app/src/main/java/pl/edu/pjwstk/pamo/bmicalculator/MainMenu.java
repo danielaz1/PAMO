@@ -25,7 +25,7 @@ public class MainMenu extends Fragment {
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
-
+     *
      * @return A new instance of fragment MainMenu.
      */
 
@@ -73,6 +73,16 @@ public class MainMenu extends Fragment {
 
             }
         });
+
+        view.findViewById(R.id.button_corona_quiz).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(MainMenu.this)
+                        .navigate(R.id.action_mainMenu_to_coronaQuiz);
+
+            }
+        });
+
     }
 
 }

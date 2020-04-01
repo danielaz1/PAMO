@@ -4,7 +4,9 @@
     <string name="button_calculate">OBLICZ</string>
     <string name="button_calculate_bmi">OBLICZ BMI</string>
     <string name="button_calculate_cal">ILE MOGĘ ZJEŚĆ KALORII</string>
-    <string name="button_what_to_eat">Co jeść w czasach CorivaVirusa</string>
+    <string name="button_what_to_eat">Co jeść w czasach koronawirusa</string>
+    <string name="button_corona_quiz">Co wiesz o koronawirusie?</string>
+    <string name="button_corona_statistics">Statystyki COVID-19</string>
     <string name="text_mass">Masa</string>
     <string name="text_height">Wzrost</string>
     <string name="text_age">Wiek</string>
@@ -15,6 +17,13 @@
     <string name="text_kcal_result">Zalecane spożycie kcal/dzień</string>
     <string name="first_fragment_label">Calculate BMI</string>
     <string name="logo_description">Logo</string>
+    <string name="incorrect_answer">Incorrect!</string>
+    <string name="results">%1$d guesses, %2$.02f%% correct</string>
+<!--  questions  -->
+    <string name="question">Pytanie %1$d z %2$d</string>
+
+    <string name="guess_answer">Wybierz odpowiedź</string>
+    <string name="image_description">Obrazek do pytania</string>
 
     <string name="pizza_recipe">Składniki:\n
 ciasto na pizzę\n
@@ -27,5 +36,6 @@ kilka pieczarek, ok 5-6 sztuk\n
 2 łyżki kukurydzy z puszki\n
 Opcjonalnie: dwie łyżki masła czosnkowo-ziołowego\n
 </string>
+    <string name="reset_quiz">reset</string>
 
 </resources>
