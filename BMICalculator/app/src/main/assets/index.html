@@ -1,0 +1,67 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+google.charts.load('current', {
+  packages: ['corechart', 'bar']
+});
+google.charts.setOnLoadCallback(drawMultSeries);
+
+function drawMultSeries() {
+  var data = google.visualization.arrayToDataTable([
+    ['Kraj', 'Zachorowania', 'Przypadki śmiertelne', 'Wyzdrowienia'],
+    ['Polska', 2545, 100, 10],
+    ['USA', 200000, 3450, 8000],
+    ['Chiny', 80000, 4000, 76000],
+    ['Włochy', 11000, 13000, 20000],
+    ['Hiszpania', 102000, 9131, 22647],
+    ['Niemcy', 76544, 891, 18700],
+    ['Francja', 52870, 4032, 11053]
+  ]);
+
+  var options = {
+    title: 'Koronawirus Zachorowania, Śmiertelność, wyzdrowienia',
+    chartArea: {
+      width: '50%'
+    },
+    hAxis: {
+      title: 'Populacja',
+      minValue: 0
+    },
+    vAxis: {
+      title: 'Kraj'
+    }
+  };
+
+  var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+  chart.draw(data, options);
+  }
+    </script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Wiek', '% przypadków śmiertelnych'],
+            ['80+', 18.8],
+            ['70-79', 8.0],
+            ['60-69', 3.6],
+            ['50-59', 1.3],
+            ['40-49', 0.4],
+            ['30-39', 0.2],
+            ['20-29', 0.2],
+            ['10-19', 0.2]
+            ]);
+        var options = {
+             title: 'Śmiertelność w podziale na wiek'
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+}
+    </script>
+</head>
+    <body>
+        <div id="chart_div"></div>
+        <div id="piechart"></div>
+    </body>
+</html>

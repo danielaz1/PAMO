@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_mainMenu_to_coronaQuiz"
             app:destination="@id/coronaQuiz" />
+        <action
+            android:id="@+id/action_mainMenu_to_coronaStats"
+            app:destination="@id/coronaStats" />
     </fragment>
     <fragment
         android:id="@+id/calculateCalories"
@@ -56,6 +59,15 @@
         tools:layout="@layout/fragment_corona_quiz" >
         <action
             android:id="@+id/action_coronaQuiz_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/coronaStats"
+        android:name="pl.edu.pjwstk.pamo.bmicalculator.CoronaStats"
+        android:label="fragment_corona_stats"
+        tools:layout="@layout/fragment_corona_stats" >
+        <action
+            android:id="@+id/action_coronaStats_to_mainMenu"
             app:destination="@id/mainMenu" />
     </fragment>
 </navigation>

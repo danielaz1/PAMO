@@ -19,7 +19,7 @@
     <string name="logo_description">Logo</string>
     <string name="incorrect_answer">Incorrect!</string>
     <string name="results">%1$d guesses, %2$.02f%% correct</string>
-<!--  questions  -->
+    <!--  questions  -->
     <string name="question">Pytanie %1$d z %2$d</string>
 
     <string name="guess_answer">Wybierz odpowiedź</string>
@@ -37,5 +37,8 @@ kilka pieczarek, ok 5-6 sztuk\n
 Opcjonalnie: dwie łyżki masła czosnkowo-ziołowego\n
 </string>
     <string name="reset_quiz">reset</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
