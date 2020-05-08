@@ -16,23 +16,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.614" />
+        />
 
     <TextView
-        android:id="@+id/textView_kcal_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_kcal_result"
-        app:layout_constraintBottom_toTopOf="@+id/textView_result"
+        android:id="@+id/textView_result"
+        android:layout_width="110dp"
+        android:layout_height="53dp"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_kcal_result"
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="visible" />
 
     <RadioGroup
         android:id="@+id/radioGroup_gender"
         android:layout_width="153dp"
         android:layout_height="97dp"
-        android:layout_marginBottom="26dp"
         app:layout_constraintBottom_toTopOf="@+id/button_calculate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -51,19 +54,6 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/textView_result"
-        android:layout_width="110dp"
-        android:layout_height="53dp"
-        android:layout_marginBottom="44dp"
-        android:textSize="24sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:visibility="visible" />
-
-    <TextView
         android:id="@+id/textView_mass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -77,19 +67,9 @@
         android:id="@+id/editText_age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_gender"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView_age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_age"
-        app:layout_constraintBottom_toTopOf="@+id/editText_age"
+        app:layout_constraintBottom_toTopOf="@+id/textView_gender"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -100,7 +80,17 @@
         android:text="@string/text_gender"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup_gender"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/textView_age"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -113,13 +103,11 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/editText_height"
+    <TextView
+        android:id="@+id/textView_age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="47dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
+        android:text="@string/text_age"
         app:layout_constraintBottom_toTopOf="@+id/editText_age"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -128,11 +116,20 @@
         android:id="@+id/button_calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="88dp"
         android:text="@string/button_calculate"
-        app:layout_constraintBottom_toTopOf="@+id/textView_result"
+        app:layout_constraintBottom_toTopOf="@+id/textView_kcal_result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_kcal_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_kcal_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_calculate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,22 +6,10 @@
     app:startDestination="@id/mainMenu">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="pl.edu.pjwstk.pamo.bmicalculator.CalculateBMIFragment"
-        android:label="@string/button_what_to_eat"
-        tools:layout="@layout/fragment_first">
-        <action
-            android:id="@+id/action_FirstFragment_to_mainMenu"
-            app:destination="@id/mainMenu" />
-    </fragment>
-    <fragment
         android:id="@+id/mainMenu"
         android:name="pl.edu.pjwstk.pamo.bmicalculator.MainMenu"
         android:label="fragment_main_menu"
         tools:layout="@layout/fragment_main_menu" >
-        <action
-            android:id="@+id/action_mainMenu_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
         <action
             android:id="@+id/action_mainMenu_to_calculateCalories"
             app:destination="@id/calculateCalories" />
@@ -34,10 +22,13 @@
         <action
             android:id="@+id/action_mainMenu_to_coronaStats"
             app:destination="@id/coronaStats" />
+        <action
+            android:id="@+id/action_mainMenu_to_calculateBMI"
+            app:destination="@id/calculateBMI" />
     </fragment>
     <fragment
         android:id="@+id/calculateCalories"
-        android:name="pl.edu.pjwstk.pamo.bmicalculator.CalculateCalories"
+        android:name="pl.edu.pjwstk.pamo.bmicalculator.CalculateCaloriesFragment"
         android:label="CalculateCalories" >
         <action
             android:id="@+id/action_calculateCalories_to_mainMenu"
@@ -63,11 +54,19 @@
     </fragment>
     <fragment
         android:id="@+id/coronaStats"
-        android:name="pl.edu.pjwstk.pamo.bmicalculator.CoronaStats"
+        android:name="pl.edu.pjwstk.pamo.bmicalculator.CoronaStatsFragment"
         android:label="fragment_corona_stats"
         tools:layout="@layout/fragment_corona_stats" >
         <action
             android:id="@+id/action_coronaStats_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculateBMI"
+        android:name="pl.edu.pjwstk.pamo.bmicalculator.CalculateBMIFragment"
+        android:label="CalculateBMI" >
+        <action
+            android:id="@+id/action_calculateBMI_to_mainMenu"
             app:destination="@id/mainMenu" />
     </fragment>
 </navigation>
